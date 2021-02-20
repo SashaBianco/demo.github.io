@@ -1,0 +1,470 @@
+@import config
+
+$white: #ffffff
+$black: #000000
+
+   
+@font-face
+    font-family: "Gilroy"  
+    src: url("../fonts/src/Gilroy-Bold.ttf") format("truetype")
+
+@font-face
+    font-family: "FuturaPT"  
+    src: url("../fonts/src/FuturaPT-Medium.ttf") format("truetype")
+
+html
+    background: #cfcfcf
+
+body
+    width: 100%
+    max-width: 411px
+    margin: auto
+
+.header
+    width: 100%
+    height: 60px
+    background: $black
+    display: flex
+    align-items: center
+
+.logo
+    width: calc(100% - 175px)    
+    padding-left: 12px
+
+.menu
+    width: 105px
+    height: 60px
+    background: $white
+    position: relative
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15)
+    display: flex
+
+
+
+// Иконки для header и footer
+
+.burger-container,
+.magnifier-container
+    width: 50%
+    position: relative
+    cursor: pointer
+    background: $white
+    outline: none
+    border: none
+
+.burger
+    span
+        display: block
+        position: absolute
+        background: black
+        height: 2px
+        width: 22px
+        top: 30px
+        left: 21px
+        outline: none
+        border: none
+        &::before,
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            height: 2px
+            width: 22px
+            background: black   
+        &::after
+            top: 9px
+        &::before
+            top: -9px
+
+.burger-footer
+    span
+        left: 9px
+        top: -1px
+
+.magnifier
+    span
+        display: block
+        position: absolute
+        background: none
+        width: 18px
+        height: 18px
+        border: 2px solid $black
+        border-radius: 50%
+        top: 19px
+        right: 25px
+        &::after
+            width: 8px
+            height: 2px
+            content: ""
+            display: block
+            position: absolute
+            background: $black
+            left: 10px
+            top: 15px
+            transform: rotate(45deg)
+
+.magnifier-footer
+    span
+        top: -11px
+        right: 9px 
+
+.basket-container
+    width: 70px
+    position: relative
+    
+.basket
+    span
+        display: block
+        position: absolute
+        width: 19px
+        height: 17.5px
+        border: 2px solid $white
+        background: none
+        bottom: 50%
+        top: calc(50% - 6px)
+        right: 21px
+        &::before,
+        &::after
+            display: block
+            position: absolute
+        &::before
+            content: "2"
+            height: 23px
+            width: 23px
+            top: -3px
+            right: 10px
+            color: #25FFCB
+        &::after
+            height: 11px
+            width: 11px
+            content: ""
+            border: 2px solid $white
+            border-top-right-radius: 50%
+            border-top-left-radius: 50%
+            right: 2px
+            top: -8px
+            border-bottom: none
+
+.basket-footer
+    span
+        border: 2px solid $black
+        right: 23px
+        &::before
+            display: none
+        &::after
+            border: 2px solid $black
+            border-bottom: none
+
+
+.profile-container
+    width: 100%
+    position: relative
+
+    span
+        display: block
+        position: absolute
+        width: 19.92px
+        height: 14px
+        border: 2px solid $black
+        background: none
+        right: 21px
+        top: calc(50% - 3px)
+        border-top-right-radius: 50%
+        border-top-left-radius: 50%
+        &::after
+            content: ""
+            position: absolute
+            display: block
+            border: 2px solid $black
+            height: 14px
+            width: 14px
+            border-radius: 50%
+            top: -11px
+            left: 0.5px
+            background: $white
+
+h1, h2
+    padding: 27px 0
+    font-size: 35px
+    text-align: center
+    font-weight: 800
+    font-family: "Gilroy"
+    line-height: 38px
+
+.hr
+    width: 100%
+    height: 1px
+    background: #EDEDED
+
+p, h4, a, h3
+    font-size: 15px
+    line-height: 22px       
+    font-family: "FuturaPT"
+    font-style: normal
+    font-weight: 450 
+    padding: 0
+    margin: 0
+
+p, h4, h1, h2    
+    color: $black
+
+// Блок товара
+
+.price
+    color: #60C94F    
+
+.product
+    background: $white
+    width: 100%
+    display: flex
+    .img-container
+        margin-left: 25px
+        margin-top: 17.97px
+        margin-right: 14px
+        img
+            height: 150px
+            width: 150px
+    .information-product
+        padding-top: 16.97px
+        width: 196px
+    .name-product
+        color: $black
+        line-height: 26px
+        font-size: 20px
+        padding-top: 4px
+        padding-bottom: 14px
+    .availability
+        padding-top: 13px
+        padding-bottom: 17px
+    form
+        select 
+            width: 80px
+            height: 48px
+            display: flex
+            justify-content: center
+            align-items: center
+            font-weight: 600   
+            border: 2px solid #EBEBEB
+            border-radius: 3px
+            background: $white
+            box-sizing: border-box
+            font-size: 20px
+            padding: 0 14px
+    .close-container
+        width: 70px
+        position: relative
+        right: 19px
+        top: 25px
+    .close
+        span
+            width: 14px
+            height: 2px
+            border: 1px solid $black
+            display: block
+            position: absolute
+            right: 0
+            top: 0
+            transform: rotate(45deg)
+            &::after
+                content: ""
+                width: 14px
+                height: 2px
+                border: 1px solid $black
+                display: block
+                position: absolute
+                right: -1px
+                top: -1px
+                transform: rotate(90deg)
+
+//Блок подарка
+
+.gift
+    padding: 10px 21px 8px
+    display: flex
+    width: 100%
+    .gift-text
+        width: calc(100% - 60px)
+    h4
+        color: #D37F64
+        font-size: 20px   
+        line-height: 23px
+        height: 29px
+    .img-container
+        margin-left: 19px
+        img
+            width: 60px
+            height: 60px
+
+//Блок оформления заказа
+
+.checkout
+    background: #F6F6F6
+    padding: 0 21px
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+
+    label
+        font-size: 11px
+        line-height: 14px
+        color: #BEBEBE
+        padding-top: 10px
+        padding-left: 9px
+        position: absolute
+
+    h2
+        font-size: 25px
+        line-height: 34px
+        display: flex
+        align-items: center
+    
+    input
+        width: 100%
+        height: 57px
+        margin-bottom: 10px
+        background: #FFFFFF
+        border: 1px solid #EDEDED
+        box-sizing: border-box
+        border-radius: 3px
+        font-family: "FuturaPT"
+        font-style: normal
+        font-weight: 600
+        &::placeholder
+            color: #BEBEBE
+
+    input[type='text'],
+    input[type='tel'],
+    input[type='email']
+        padding-top: 21px
+        padding-left: 16px
+
+    .location
+        width: calc(50% - 5px)
+        margin-right: 5px
+    .city
+        margin-right: 0
+
+    .note
+        width: 100%
+        height: 35px
+        background: #FFFFE6
+        border-radius: 5px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 41px
+        p
+            line-height: 19px
+
+    .promo-container
+        display: flex
+    .promo
+        width: calc(100% - 79px)
+
+    .promo-button
+        width: 65px
+        background: $black
+        color: $white
+        margin-left: 10px
+        text-transform: uppercase
+        font-size: 20px
+        font-weight: 800
+        font-family: "Gilroy"
+        line-height: 25px
+        border: none
+
+    .offer
+        display: flex
+        .offer-text
+            padding-top: 12px
+            padding-left: 9px
+            p
+                color: #BEBEBE
+
+    input[type='checkbox']
+        background: $white
+        border-radius: 3px
+        padding-top: 16px
+        width: 17px
+    .order
+        display: flex
+        align-items: center
+        padding-top: 40px
+        padding-bottom: 11px
+        h3, p
+            font-weight: 600
+            line-height: 23px
+            font-size: 25px
+            width: 50%  
+        p
+            text-align: right
+    .order-button
+        background: #39B54A
+        color: $white
+        border-radius: 3px
+        margin-bottom: 27px
+
+//Блок контактов
+
+.contacts
+    padding: 0 21px 
+    text-align: center 
+    .schedule
+        padding-top: 30px
+        text-align: center
+        font-size: 13px
+        line-height: 20px
+        p
+            color: #BEBEBE
+    a
+        font-size: 30px
+        line-height: 38px
+        color: $black
+        text-decoration: none   
+
+    .desktop
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 38px
+        width: 100%
+        background: $white
+        border: 2px solid #EDEDED
+        border-radius: 3px
+        margin-top: 26px
+        p
+            padding-right: 10px
+        img 
+            width: 12px
+            height: 11px
+    .info
+        display: flex
+        padding-top: 18px
+        .copyright
+            text-align: left
+            width: 70%
+        .social
+            width: 30%
+            text-align: right     
+            img
+                padding-left: 17px         
+
+.footer
+    background: $white
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15)
+    height: 60px
+    margin-top: 14px
+    width: 100%  
+    max-width: 411px  
+    display: flex
+    position: sticky
+    bottom: 0
+    .img-container
+        height: 100%
+        width: calc(100%/6)
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        cursor: pointer
+        

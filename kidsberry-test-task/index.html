@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Kidsberry. Тестовое задание</title>
+	<meta name="description" content="Тестовая работа">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+	<body>
+		<header class="header">
+			<nav class="menu">
+				<div class='burger-container'>
+					<a href='#' class='burger'>
+						<span></span>
+					</a>
+				</div>
+				<div class="magnifier-container">
+					<a href='' class='magnifier'>
+						<span></span>
+					</a>
+				</div>	
+			</nav>
+
+			<div class='logo'>
+				<a href=''><img src='images/src/logo.png' /></a>
+			</div>
+			<div class="basket-container">
+				<a href="" class='basket'>
+					<span></span>
+				</a>
+			</div>
+		</header>
+
+		<main>
+			<h1>Корзина</h1>
+			<div class='hr'> </div>
+			<section class="product">
+				<div class="img-container">
+					<img src="images/src/product.png" alt='Мультирамка' />
+				</div>
+				
+				<div class="information-product">
+					<p class='price'>4 850 руб.</p>
+					<p class="name-product">Мультирамка Edge настенная, натуральное дерево</p>
+					<form>
+						<select id='select'>
+							<option value='4 850 руб'>1</option>
+							<option value="9 700 руб">2</option>
+							<option value="14 550 руб">3</option>
+							<option value="19 400 руб">4</option>
+							<option value="24 250 руб">5</option>
+							<option value="29 100 руб">6</option>
+							<option value="33 950 руб">7</option>
+							<option value="38 800 руб">8</option>
+							<option value="43 650 руб">9</option>
+							<option value="48 500 руб">10</option>
+						</select>
+					</form>
+					<p class='availability'>В наличии на складе</p>
+				</div>
+				<div class='close-container'>
+					<a href = "" class='close'>
+						<span></span>
+					</a>
+				</div>
+			</section>
+			<div class='hr'> </div>
+
+			<section class="gift">
+				<div class="gift-text">
+					<h4>Ваш подарок</h4>
+					<p>Декор для стен Bloomer, красный</p>
+				</div>
+				<div class="img-container">
+					<img src="images/src/gift.png" alt='Декор' />
+				</div>
+				
+			</section>
+
+			<section class='checkout'>
+				<h2>Оформление заказа</h2>
+				<form>
+					<label for="name">Представьтесь</label>
+					<input type="text" name="name" id='name' required>
+					<label for="telephone">Телефон</label>
+					<input type="tel" name="tel" placeholder='+7 (___) ___ - __ - __ ' id='telephone' oninput="this.value = this.value.replace(/[^0-9\+.]/g, '').replace(/(\..*)\./g, '$1');" required>
+					<label for="email">E-mail</label>
+					<input type="email" name="email"  id='email' required>
+					<div class="location-container">
+						<label for="region">Регион</label>
+						<input type="text" name='region'  class='location' id='region' required>
+						<label for="city">Город</label>
+						<input type="text" name='city' class='location city' id='city' required>
+					</div>
+					<div class='note'>
+						<p>Стоимость и способ доставки уточнит наш оператор</p>
+					</div>
+					<div class='promo-container'>
+						<label for="promocode">Промокод</label>
+						<input type="text" name="promo" class='promo' id='promocode'>
+						<input type='submit' value='Ок' class="promo-button">
+					</div>
+					<div class='offer'>
+						<input type='checkbox'>
+						<div class='offer-text'>
+							<p> Оставляя заказ, я соглашаюсь с условиями</p>
+							<a href='#'>оферты и правилами оказания услуг</a>
+						</div>
+					</div>
+					<div class="order">
+						<h3>Сумма заказа</h3>
+							<p class='price'  id='price-total'>4 850 руб.</p>
+					</div>
+					
+					<input type='submit' value="Оформить заказ" class='order-button'> 
+				</form>
+			</section>
+
+			<section class="contacts">
+				<div class='schedule'> 
+					<p>Работаем без выходных</p>
+					<p>c 09:00 до 22:00</p>
+				</div>
+				<a href="tel:88003503309">8 800 350-33-09</a>
+
+				<a>
+					<a class='desktop' href=''>
+							<p>Перейти на основной сайт</p>
+							<img src='images/src/desktop.png' />
+					</a>
+				</a>
+
+				<div class="info">
+					<div class="copyright">
+						<p>© 2020, Evasolo.me</p>
+						<p>Фирменный магазин Eva Solo</p>
+					</div>
+					
+	
+					<div class='social'>
+						<a href=''><img src='images/src/vk.png' /></a>
+						<a href=''><img src="images/src/inst.png" /></a>
+					</div>
+				</div>
+				
+		
+			</section>
+
+		</main>
+
+		<footer class="footer">
+			<div class="img-container" >
+				<div class='burger-container'>
+					<a href='' class='burger burger-footer'>
+						<span></span>
+					</a>
+				</div>
+			</div>
+			<div class="img-container">
+				<div class="magnifier-container">
+					<a href='' class='magnifier magnifier-footer'>
+						<span></span>
+					</a>
+				</div>	
+			</div>
+			<div class="img-container" > 
+				<a href=''><img src="images/src/tel.png"></a>
+			</div>
+			<div class="img-container">
+				<a href=''><img src="images/src/chat.png"></a>
+			</div>
+			<div class="img-container" >
+				<div class="profile-container">
+					<a href="" class='profile'>
+						<span></span>
+					</a>
+				</div>	
+			</div>
+			<div class="img-container">
+				<div class="basket-container">
+					<a href="" class='basket basket-footer'>
+						<span></span>
+					</a>
+				</div>
+			</div>
+
+		</footer>
+		
+
+		<script src="js/app.min.js"></script>
+
+	</body>
+</html>
